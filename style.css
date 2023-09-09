@@ -48,12 +48,14 @@ h4 {
   .clock-container {
     flex-direction: column;
     gap: 40px;
+    margin-top: -60px;
   }
 }
 @media (min-width: 768px) {
   .clock-container {
     flex-direction: row;
     gap: 80px;
+    margin-top: unset;
   }
   .clock-column:not(:last-child)::after {
     position: absolute;
