@@ -1,0 +1,67 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800,900&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", "sans-serif";
+  font-weight: 300;
+}
+body {
+  background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
+}
+h1 {
+  font-size: 70px;
+}
+h4 {
+  color: #fff;
+  opacity: 0.3;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 12px;
+}
+.container {
+  padding: 15px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clock-container {
+  display: flex;
+  padding: 40px 60px;
+  flex-direction: column;
+  background-color: #080808;
+  color: #fff;
+  justify-content: space-between;
+}
+.clock-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 90px;
+  align-items: center;
+}
+
+@media (min-width: 1px) {
+  .clock-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .clock-container {
+    flex-direction: row;
+    gap: 80px;
+  }
+  .clock-column:not(:last-child)::after {
+    position: absolute;
+    content: ":";
+    right: -50px;
+    top: 45%;
+    transform: translateY(-55%);
+    opacity: 0.3;
+    font-size: 40px;
+  }
+}
