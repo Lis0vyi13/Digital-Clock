@@ -8,7 +8,6 @@
 }
 body {
   background: linear-gradient(45deg, #1870ed 0, #f18f88 100%);
-  overflow: hidden;
 }
 h1 {
   font-size: 70px;
@@ -24,12 +23,19 @@ h4 {
   padding: 15px;
   height: 100vh;
   margin: 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
+@media (orientation: landscape) {
+  .clock-container {
+    transform: translateY(-15%);
+  }
+}
 .clock-container {
   display: flex;
+
   padding: 40px 60px;
   flex-direction: column;
   background-color: #080808;
